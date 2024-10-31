@@ -3,15 +3,14 @@
 Este projeto tem como objetivo a xecução de um aplicativo de Bloco de Notas, sendo um desafio.
 
 # Desafios Enfrentados no Projeto
-Desenvolver o back-end deste projeto foi um grande desafio, pois eu não tinha experiência prévia com Spring Boot
-para desenvolvimento de APIs. Desde o início, tive que aprender conceitos fundamentais,
-como injeção de dependência, mapeamento de entidades com JPA e criação de endpoints RESTful, além de entender a configuração
-de um servidor web com Spring.
+Este projeto foi particularmente desafiador, pois eu não tinha muita experiência com linguagens de front-end, em especial o React.
+Desde o início, tive que aprender a estrutura básica do React, e entender como esses elementos
+se conectam para criar uma interface funcional e atraente. Além disso, precisei explorar boas práticas de design
+e usabilidade para garantir que a aplicação fosse intuitiva para os usuários.
 
-Além disso, a curva de aprendizado foi intensa por conta das configurações iniciais e dos detalhes de configuração de segurança,
-que exigiram muita pesquisa e leitura de documentação. Embora o processo tenha sido desafiador, conseguir superar esses obstáculos
-me trouxe um conhecimento valioso sobre a estrutura de projetos back-end em Java e a arquitetura Spring Boot, além de fortalecer minhas
-habilidades em desenvolvimento de APIs e integração com banco de dados.
+Com o tempo, consegui superar várias dificuldades, como posicionamento de elementos, estilização responsiva e manipulação do DOM.
+O processo foi lento no começo, exigindo bastante pesquisa, prática e a leitura de documentação, mas cada obstáculo vencido me trouxe mais confiança.
+Ao final, o projeto não só me ajudou a construir a aplicação, mas também expandiu minhas habilidades e compreensão no desenvolvimento front-end.
 
 # Tipo de Mudança
 
@@ -19,50 +18,54 @@ Marque a caixa correspondente ao tipo de mudança que esta PR faz:
 
 - [x] Nova funcionalidade
 
-# Alocação da API e Banco de Dados no Railway
-Minha API e o banco de dados foram implantados e estão funcionando online na plataforma Railway. A escolha pelo Railway foi motivada pela facilidade
-de deploy contínuo e pela integração prática com bancos de dados.
-
-A API foi configurada para responder a requisições externas, e o banco de dados também está acessível para o armazenamento e recuperação
-de dados em tempo real, facilitando o acesso remoto e o funcionamento online da aplicação. Com a infraestrutura do Railway, posso garantir a estabilidade,
-segurança e escalabilidade para o projeto, assegurando que o ambiente de produção esteja constantemente disponível para uso.
 
 # Passos para Testar
 
-1. 		[Instalação do Postman]
+1. 		[Instalação de uma IDE]
 
-			Baixe e instale o Postman.
-			Após a instalação, abra o Postman e faça login (ou crie uma conta, caso ainda não tenha uma).
+			Para começar, é recomendado instalar uma IDE, como o Visual Studio Code (VS Code.
+			Baixe o instalador de acordo com seu sistema operacional e siga as instruções na tela para instalar.
 			
 2. 		[Download do Repositório]
 
 			Abra o terminal da sua IDE ou do sistema e navegue até o diretório onde você deseja clonar o repositório.
 			Use o comando abaixo para clonar o repositório para o seu ambiente local:
 			
-			git clone https://github.com/RealC0/core-notes
+			git clone https://github.com/RealC0/core-notes-
 
-3. 		[Configuração e Teste dos Endpoints no Postman]
+3. 		[Instalação do Node.js e npm]
 
-			Abra o Postman e crie uma nova Request.
-			Insira a URL do endpoint:
+			Certifique-se de que o Node.js e o npm estão instalados em seu sistema. Eles são necessários para gerenciar os pacotes da aplicação.
+			Para verificar se o Node.js e o npm estão instalados, execute os comandos abaixo:
 			
-			https://core-notes-production.up.railway.app/notes
+			node -v
+			npm -v
 			
-			Selecione o método HTTP adequado (GET, POST, PUT, DELETE, etc.) de acordo com o que deseja testar.
-			Para endpoints que exigem dados (como POST ou PUT), vá para a aba Body no Postman:
-			Selecione raw e defina o tipo como JSON.
-			Insira o payload JSON necessário no campo de texto. Exemplo:
+			Se eles não estiverem instalados, baixe o instalador do Node.js, que inclui o npm, a partir do site oficial, e siga as instruções de instalação.
 			
-			{
-				 "title": "Teste",
-				 "content": "Executando um teste de conteudo no database",
-				 "favorite": false,
-				 "color": "white"
-			}
-			
-			
-4.		[Envio da Requisição e Verificação da Resposta]
+4.		[Instalação dos Pacotes do npm]
 
-			Clique no botão Send para enviar a requisição.
-			Verifique a resposta na seção Response do Postman. Ela deve mostrar o status HTTP (200, 404, etc.) e o corpo da resposta retornado pela API.
-			Para testes adicionais, ajuste os dados ou parâmetros e envie novamente para validar diferentes cenários.
+			Após clonar o repositório, navegue até o diretório do projeto:
+			
+			cd <nome-do-diretório>
+			
+			Em seguida, execute o comando abaixo para instalar todas as dependências necessárias:
+			
+			npm install
+			
+			Esse comando vai ler o arquivo package.json e instalar todos os pacotes especificados.
+			
+5.		[Execução da Aplicação]
+
+			Após a instalação dos pacotes, inicie o servidor de desenvolvimento com o comando:
+			
+			npm run dev
+			
+			Esse comando executa o script definido no package.json e inicia a aplicação em um servidor local.
+			Normalmente, a aplicação será acessível em http://localhost:5173.
+			
+6.		[Testando a Aplicação]
+
+			Abra um navegador e acesse http://localhost:5173.
+			Explore as funcionalidades da aplicação para garantir que todos os componentes estão funcionando conforme o esperado.
+
